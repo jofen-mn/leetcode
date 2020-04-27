@@ -1,8 +1,8 @@
 package main
 
 import (
-	"sort"
 	"fmt"
+	"sort"
 )
 
 /**
@@ -15,12 +15,12 @@ import (
 示例 2:
 输入: [2,2,1,1,1,2,2]
 输出: 2
- */
+*/
 
- /**
- 通过api
-  */
-func majorityElementByApi(num []int) int  {
+/**
+通过api
+*/
+func majorityElementByApi(num []int) int {
 	sort.Ints(num)
 	mid := len(num) / 2
 	return num[mid]
@@ -32,8 +32,8 @@ func majorityElementByApi(num []int) int  {
 定义一个计数器从数组第一个位置开始计数，置为1
 遇到相同的加1，不同的减1，直到数组遍历结束或者计数器为零
 计数器为0交换下一个元素
- */
-func majorityElement(num []int) int  {
+*/
+func majorityElement(num []int) int {
 	count := 1
 	result := num[0]
 	for i := 1; i < len(num); i++ {
@@ -50,6 +50,6 @@ func majorityElement(num []int) int  {
 }
 
 func main() {
-	var num = []int{2,3,4,2,2,1,6,2,2}
+	var num = []int{2, 3, 4, 2, 2, 1, 6, 2, 2}
 	fmt.Println(majorityElement(num))
 }
